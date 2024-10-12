@@ -7,5 +7,12 @@ wal -q -c
 wal -q -i $WALL
 xdotool key super+F5
 
+rm ~/.config/BetterDiscord/themes/*
+rm ~/.config/Vencord/themes/*
+pywal-discord -d
+mv ~/.config/BetterDiscord/themes/* ~/.config/Vencord/themes
+
+starttree.py
+
 pkill st
 st &
