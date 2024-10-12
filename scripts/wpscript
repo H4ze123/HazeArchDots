@@ -1,0 +1,11 @@
+#!/bin/bash
+
+WALL=$(find ~/Pictures/Wallpapers -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+
+xwallpaper --zoom $WALL
+wal -q -c
+wal -q -i $WALL
+xdotool key super+F5
+
+pkill st
+st &
