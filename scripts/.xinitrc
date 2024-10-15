@@ -52,5 +52,5 @@ export PATH=$HOME/.local/bin:$PATH
 /home/haze/.local/bin/wpscript &
 xrandr --output Virtual1 --mode 1920x1080
 dwmblocks &
-xcompmgr &
+picom &
 exec dwm
