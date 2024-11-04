@@ -4,7 +4,7 @@ WALL=$(find ~/Pictures/Wallpapers -type f -name "*.jpg" -o -name "*.png" | shuf 
 
 xwallpaper --zoom $WALL
 wal -q -c
-wal -q -i $WALL
+wal -q -i "$WALL"
 xdotool key super+F5
 
 rm ~/.config/BetterDiscord/themes/*
