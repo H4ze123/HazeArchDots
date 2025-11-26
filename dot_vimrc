@@ -1,0 +1,32 @@
+set nocompatible
+syntax on
+filetype plugin indent on
+
+set showcmd
+set showmode
+set wildmenu
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set autoindent
+set smartindent
+set clipboard=unnamedplus
+
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+call plug#end()
+
+nnoremap <F5> :w<CR>:!gcc % -o %:r.out && ./%:r.out<CR>
+set makeprg=gcc\ %\ -o\ %:r
+
+augroup c_settings
+    autocmd!
+    autocmd FileType c,cpp setlocal shiftwidth=4 tabstop=4 expandtab
+    autocmd FileType c,cpp setlocal autoindent smartindent
+augroup END
+
