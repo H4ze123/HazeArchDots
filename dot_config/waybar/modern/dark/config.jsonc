@@ -5,6 +5,7 @@
 
 {
   // General Settings
+  "include": "settings.jsonc",
   "layer": "bottom",
   "margin-top": 8,
   "margin-bottom": 0,
@@ -225,33 +226,32 @@
 
   // Pulseaudio
   "pulseaudio": {
-      "states": {
-          "normal": 100,
-          "warning": 150,
-          "danger": 250
-      },
-      "scroll-step": 1,
-      "max-volume": 100,
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{icon}  {volume}% ",
-      "format-bluetooth-muted": "  Muted ",
-      "format-muted": "  Muted",
-      "format-source": "{volume}% ",
-      "format-source-muted": "",
-      "format-warning": "{icon}  {volume}%   ",
-      "format-danger": "{icon}  {volume}%   ",
-      "format-icons": {
-          "headphone": " ",
-          "hands-free": " ",
-          "headset": " ",
-          "phone": " ",
-          "portable": " ",
-          "car": " ",
-          "default": [" ", "  ", "  ", "  "]
-      },
-      "tooltip-format": "{desc}\n\nSpeaker: {volume}% 󰓃\nMic: {format_source}",
-      "on-click": "pavucontrol",
-      "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "states": {
+      "normal": 100,
+      "warning": 150,
+      "danger": 250
+    },
+    "scroll-step": 1,
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}% ",
+    "format-bluetooth-muted": "  Muted ",
+    "format-muted": "  Muted",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-warning": "{icon}  {volume}%   ",
+    "format-danger": "{icon}  {volume}%   ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [" ", "  ", "  ", "  "]
+    },
+    "tooltip-format": "{desc}\n\nSpeaker: {volume}% 󰓃\nMic: {format_source}",
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
 
   // Bluetooth

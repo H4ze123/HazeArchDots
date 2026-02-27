@@ -4,13 +4,14 @@
 ##
 
 # EXPORTS (you will wanna add stuff here later)
-export EDITOR=vim
+export EDITOR=nvim
 
 # BASH/ZSH HISTORY
 # i decided to combine with bash history, but you can change this if you like
 HISTFILE=~/.bash_history
 HISTSIZE=10000
 SAVEHIST=10000
+
 setopt appendhistory
 setopt autocd
 setopt nomatch
@@ -24,15 +25,14 @@ fi
 # PROMPT
 eval "$(starship init zsh)"
 if [[ $(tty) == *"pts"* ]]; then
-   fastfetch --logo-type small --logo-padding-top 3 --logo-padding 3
+   fastfetch --logo-type small --logo-padding 3 --logo-padding 4
 else
     echo
     if [ -f /bin/hyprctl ]; then
-        echo "Start Hyprland with command Hyprland"
+        echo "Start Hyprland with command start-hyprland"
     fi
 fi
 
-# Created by `pipx` on 2025-05-21 10:59:48
 export PATH="$PATH:/home/haze/.local/bin"
 
 #export PYENV_ROOT="$HOME/.pyenv"
